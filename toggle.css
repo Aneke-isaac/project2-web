@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(7, 7, 7);
+    transition: 0.10s;
+    color: #fff;
+}
+body.active{
+    background-color: #fff;
+    color: #000;
+}
+
+#toggle{
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 160px;
+    border-radius: 160px;
+    background-color: #181818;
+    transition: 0.5s;
+    box-shadow: 0 0 10px #fff;
+    cursor: pointer;
+    transition: all 0.10s ease;
+}
+
+#toggle.active{
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+}
+
+#toggle .main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background-image: linear-gradient(to bottom, #333,#444 );
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px hsl(0, 0%, 15%)
+                inset 0 4px 4px rgba(225, 225, 225, 0.2)
+                inset 0 -4px 4px rgba(225, 225, 225, 0.2);
+     transition: all 0.80s;
+}
+
+#toggle.active .main{
+    left: 160px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 80%), hsl(0, 0%, 80%));
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1)
+    inset 0 4px 4px rgba(225, 225, 225,1)
+    inset 0 -4px 4px rgba(225, 225, 225,1);
+    transition: all 0.80s;
+}
